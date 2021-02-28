@@ -23,10 +23,3 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Suscripción de Azure 1(2c0e631e-6219-4156-9ff6-45df8b5c2f9a)'
-    appType: 'webApp'
-    WebAppName: 'platzicursoweb2'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
